@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TabiNote｜旅を探そう</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="TabiNote トップ">✈ TabiNote</a>
+    <nav><a href="#destinations">旅行先を探す</a><a href="apply.html">旅行を申し込む</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR NEXT JOURNEY</p>
+        <h1>次の旅は、<br>どこへ行こう。</h1>
+        <p>気分にぴったりの旅を見つけよう。週末旅行から、心に残る特別な旅まで。</p>
+        <a class="button button-light" href="#destinations">旅行先を見る <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-stamp">旅の計画を<br><strong>ここから。</strong></div>
+    </section>
+
+    <section class="search-panel" aria-labelledby="search-title">
+      <div>
+        <p class="eyebrow">FIND YOUR TRIP</p>
+        <h2 id="search-title">どんな旅をお探しですか？</h2>
+      </div>
+      <form id="search-form" class="search-form">
+        <label>キーワード
+          <input id="keyword" type="search" placeholder="例：温泉、海、街歩き">
+        </label>
+        <label>旅のスタイル
+          <select id="style-filter">
+            <option value="all">すべて</option>
+            <option value="nature">自然・リラックス</option>
+            <option value="culture">文化・街歩き</option>
+            <option value="resort">海・リゾート</option>
+          </select>
+        </label>
+        <button class="button" type="submit">検索する</button>
+      </form>
+      <p id="search-status" class="search-status" aria-live="polite">おすすめの旅行先を3件掲載しています。</p>
+    </section>
+
+    <section id="destinations" class="destinations section-wrap">
+      <div class="section-heading">
+        <div><p class="eyebrow">DESTINATIONS</p><h2>おすすめの旅行先</h2></div>
+        <p>あなたの「行ってみたい」を見つけよう。</p>
+      </div>
+      <div id="destination-list" class="destination-grid">
+        <article class="trip-card">
+          <div class="trip-photo photo-hakone"><span>自然・リラックス</span></div>
+          <div class="trip-body"><p class="location">神奈川県 · 1泊2日</p><h3>箱根で温泉と森の休日</h3><p>温泉に浸かり、森の景色を眺めながらゆったり過ごす癒やしの旅。</p><div class="trip-bottom"><strong>¥28,000<small>〜 / 1名</small></strong><a href="apply.html?trip=hakone" class="text-link">詳細・申込 →</a></div></div>
+        </article>
+        <article class="trip-card">
+          <div class="trip-photo photo-kanazawa"><span>文化・街歩き</span></div>
+          <div class="trip-body"><p class="location">石川県 · 2泊3日</p><h3>金沢で、伝統と美食めぐり</h3><p>美しい庭園、趣ある茶屋街、地元の味を楽しむ文化散策の旅。</p><div class="trip-bottom"><strong>¥42,000<small>〜 / 1名</small></strong><a href="apply.html?trip=kanazawa" class="text-link">詳細・申込 →</a></div></div>
+        </article>
+        <article class="trip-card">
+          <div class="trip-photo photo-okinawa"><span>海・リゾート</span></div>
+          <div class="trip-body"><p class="location">沖縄県 · 3泊4日</p><h3>沖縄の海でリフレッシュ</h3><p>青い海と白い砂浜、島時間を満喫するリゾートステイ。</p><div class="trip-bottom"><strong>¥68,000<small>〜 / 1名</small></strong><a href="apply.html?trip=okinawa" class="text-link">詳細・申込 →</a></div></div>
+        </article>
+      </div>
+      <p id="no-results" class="no-results" hidden>条件に合う旅行先が見つかりませんでした。キーワードやスタイルを変えてお試しください。</p>
+    </section>
+
+    <section class="planning-banner">
+      <div><p class="eyebrow">LET'S PLAN A TRIP</p><h2>旅の準備を、かんたんに。</h2><p>行き先が決まったら、申込ページで希望日や人数を入力しましょう。</p></div>
+      <a href="apply.html" class="button button-light">申込ページへ →</a>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="index.html">✈ TabiNote</a><p>※ TabiNoteは学習・デモ用の架空サイトです。実際の予約や決済は行われません。</p><small>© 2026 TabiNote Demo</small></footer>
+</body>
+</html>
