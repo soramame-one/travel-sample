@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旅行のお申し込み｜TabiNote</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">✈ TabiNote</a>
+    <nav><a href="index.html#destinations">旅行先を探す</a><a href="apply.html" aria-current="page">旅行を申し込む</a></nav>
+  </header>
+
+  <main class="apply-main">
+    <div class="apply-intro">
+      <p class="eyebrow">BOOK YOUR TRIP</p>
+      <h1>旅のお申し込み</h1>
+      <p>ご希望の内容を入力してください。入力内容の確認用デモで、実際の予約は送信されません。</p>
+    </div>
+
+    <div class="apply-layout">
+      <form id="application-form" class="application-form">
+        <h2>お客様・旅行内容</h2>
+        <label>旅行先 <span class="required">必須</span>
+          <select id="trip" name="trip" required>
+            <option value="">旅行先を選択してください</option>
+            <option value="hakone">箱根で温泉と森の休日</option>
+            <option value="kanazawa">金沢で、伝統と美食めぐり</option>
+            <option value="okinawa">沖縄の海でリフレッシュ</option>
+          </select>
+        </label>
+        <div class="form-row">
+          <label>出発希望日 <span class="required">必須</span>
+            <input type="date" id="departure" name="departure" required>
+          </label>
+          <label>人数 <span class="required">必須</span>
+            <select id="people" name="people" required>
+              <option value="1">1名</option><option value="2" selected>2名</option><option value="3">3名</option><option value="4">4名</option><option value="5">5名</option><option value="6">6名</option>
+            </select>
+          </label>
+        </div>
+        <label>お名前 <span class="required">必須</span>
+          <input type="text" id="fullname" name="fullname" autocomplete="name" placeholder="例：山田 花子" required>
+        </label>
+        <label>メールアドレス <span class="required">必須</span>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+        <label>ご要望・ご質問（任意）
+          <textarea id="notes" name="notes" rows="4" placeholder="食事や移動など、事前に伝えたいこと"></textarea>
+        </label>
+        <label class="check-label"><input type="checkbox" id="agree" required> デモサイトであり、実際の予約ではないことを確認しました。</label>
+        <button type="submit" class="button submit-button">入力内容を確認する</button>
+        <p class="form-note">このページはフロントエンド学習用です。個人情報は送信・保存されません。</p>
+      </form>
+
+      <aside class="booking-summary">
+        <p class="eyebrow">YOUR SELECTION</p><h2>選択中の旅行</h2>
+        <div id="summary-photo" class="summary-photo photo-hakone"></div>
+        <h3 id="summary-title">旅行先を選択してください</h3>
+        <p id="summary-duration">旅行先を選ぶと詳細が表示されます。</p>
+        <div class="summary-price"><span>参考価格（1名）</span><strong id="summary-price">—</strong></div>
+        <p class="summary-disclaimer">表示価格は架空の参考価格です。交通費・宿泊条件などの詳細は設定していません。</p>
+        <a href="index.html#destinations" class="text-link">← 旅行先一覧に戻る</a>
+      </aside>
+    </div>
+
+    <section id="confirmation" class="confirmation" hidden aria-live="polite">
+      <div class="confirmation-icon">✓</div><p class="eyebrow">DEMO CONFIRMATION</p>
+      <h2>入力内容を確認しました</h2>
+      <p>これはデモ表示です。予約は成立しておらず、情報も送信されていません。</p>
+      <div id="confirmation-details" class="confirmation-details"></div>
+      <button id="edit-button" class="button button-outline" type="button">入力画面に戻る</button>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="index.html">✈ TabiNote</a><p>※ 架空の旅行検索サイトです。実際の予約・決済機能はありません。</p><small>© 2026 TabiNote Demo</small></footer>
+</body>
+</html>
